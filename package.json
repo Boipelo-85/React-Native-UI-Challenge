@@ -1,7 +1,7 @@
 {
   "name": "react-native-ui-challenge",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "expo/AppEntry",
   "dependencies": {
     "@expo/ui": "~58.0.27",
     "expo": "~58.0.23",
@@ -16,6 +16,7 @@
     "expo-status-bar": "~58.0.4",
     "expo-symbols": "~58.0.4",
     "expo-system-ui": "~58.0.7",
+    "expo-updates": "~58.0.21",
     "expo-web-browser": "~58.0.7",
     "react": "19.3.0",
     "react-dom": "19.3.0",
@@ -29,11 +30,12 @@
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
