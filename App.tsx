@@ -1,10 +1,10 @@
+import ExchangeScreen from '@/screens/ExchangeScreen/ExchangeScreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import ExchangeScreen from './src/screens/ExchangeScreen/ExchangeScreen';
 
 export default function App() {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider >
       <ExchangeScreen />
     </SafeAreaProvider>
   );

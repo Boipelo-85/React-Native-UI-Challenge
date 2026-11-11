@@ -1,7 +1,7 @@
 {
   "name": "react-native-ui-challenge",
   "version": "1.0.0",
-  "main": "expo/AppEntry",
+  "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.27",
     "expo": "~58.0.23",

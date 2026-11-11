@@ -17,4 +17,8 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     flex: 1,
   },
+  title: {
+    color: '#f5f5f5',
+    fontSize: 20
+  },
 });
