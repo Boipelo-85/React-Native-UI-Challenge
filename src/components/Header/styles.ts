@@ -1,20 +1,38 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors } from '../../constants/colors';
-import { Spacing } from '../../constants/spacing';
-import { Typography } from '../../constants/typography';
-
 export const styles = StyleSheet.create({
   container: {
-    gap: Spacing.xs,
-    marginBottom: Spacing.xl,
+    alignItems: 'center',
+    flexDirection: 'row',
+    minHeight: 44,
   },
-  subtitle: {
-    color: Colors.textSecondary,
-    ...Typography.body,
+  side: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 32,
   },
   title: {
-    color: Colors.text,
-    ...Typography.title,
+    color: '#F5F3F7',
+    flex: 1,
+    fontSize: 17,
+    lineHeight: 23,
+    textAlign: 'center',
+  },
+  backIcon: {
+    color: '#B0ABC3',
+  },
+  bellIcon: {
+    color: '#87758D',
+  },
+  notificationDot: {
+    backgroundColor: '#AF6083',
+    borderColor: '#181219',
+    borderRadius: 5,
+    borderWidth: 1,
+    height: 9,
+    position: 'absolute',
+    right: 0,
+    top: 1,
+    width: 9,
   },
 });

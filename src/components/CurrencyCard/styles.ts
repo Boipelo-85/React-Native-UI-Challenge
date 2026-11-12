@@ -1,42 +1,54 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors } from '../../constants/colors';
 import { Spacing } from '../../constants/spacing';
-import { Typography } from '../../constants/typography';
 
 export const styles = StyleSheet.create({
-  amount: {
-    color : Colors.text,
-    padding: 0,
-    ...Typography.amount,
-  },
   card: {
-    backgroundColor: Colors.surface,
-    borderColor: Colors.border,
-    borderRadius: Spacing.lg,
-    borderWidth: 1,
-    gap: Spacing.lg,
+    gap: Spacing.md,
     padding: Spacing.lg,
   },
-  currency: {
-    alignItems: 'flex-end',
-    gap: Spacing.xs,
-  },
-  currencyCode: {
-    color: Colors.text,
-    ...Typography.currency,
-  },
-  currencyName: {
-    color: Colors.textSecondary,
-    ...Typography.caption,
-  },
-  label: {
-    color: Colors.textSecondary,
-    ...Typography.body,
-  },
-  topRow: {
+  currencyRow: {
     alignItems: 'center',
     flexDirection: 'row',
+    gap: Spacing.sm,
+  },
+  currencyIcon: {
+    alignItems: 'center',
+    backgroundColor: '#2A2A31',
+    borderRadius: 21,
+    height: 42,
+    justifyContent: 'center',
+    width: 42,
+  },
+  ethIcon: {
+    backgroundColor: '#111114',
+  },
+  currencyCode: {
+    color: '#F5F3F7',
+    fontSize: 23,
+  },
+  chevron: {
+    color: '#B0ABC3',
+  },
+  amount: {
+    color: '#F5F3F7',
+    fontSize: 50,
+    fontVariant: ['tabular-nums'],
+    lineHeight: 60,
+    padding: 0,
+  },
+  balanceRow: {
+    alignItems: 'baseline',
+    flexDirection: 'row',
+    gap: Spacing.sm,
     justifyContent: 'space-between',
+  },
+  balance: {
+    color: '#B0ABC3',
+    fontSize: 15,
+  },
+  balanceValue: {
+    flexShrink: 1,
+    textAlign: 'right',
   },
 });

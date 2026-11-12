@@ -1,26 +1,28 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors } from '../../constants/colors';
 import { Spacing } from '../../constants/spacing';
 import { Typography } from '../../constants/typography';
 
 export const styles = StyleSheet.create({
   container: {
-    gap: Spacing.md,
-    paddingHorizontal: Spacing.xs,
-    paddingVertical: Spacing.sm,
-  },
-  label: {
-    color: Colors.textSecondary,
-    ...Typography.body,
+    gap: Spacing.sm,
   },
   row: {
-    alignItems: 'center',
+    alignItems: 'baseline',
     flexDirection: 'row',
+    gap: Spacing.md,
     justifyContent: 'space-between',
   },
+  label: {
+    ...Typography.body,
+    color: '#B0ABC3',
+    flexShrink: 1,
+  },
   value: {
-    color: Colors.text,
-    ...Typography.bodyEmphasis,
+    ...Typography.body,
+    color: '#F5F3F7',
+    flexShrink: 1,
+    fontVariant: ['tabular-nums'],
+    textAlign: 'right',
   },
 });

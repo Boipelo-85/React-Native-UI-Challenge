@@ -1,23 +1,21 @@
 import { Text, View } from 'react-native';
+
 import { styles } from './styles';
 
-
 type FeeDetailsProps = {
-  exchangeRate: string;
-  fee: string;
+  rows: readonly { label: string; value: string }[];
 };
 
-export function FeeDetails({exchangeRate,fee} : FeeDetailsProps) {
+export function FeeDetails({ rows }: FeeDetailsProps) {
   return (
     <View style={styles.container}>
-     <View style={styles.row}>
-        <Text style={styles.label}>Exchange rate</Text>
-        <Text style={styles.value}>{exchangeRate}</Text>
-     </View>
-     <View style={styles.row}>
-        <Text style={styles.label}>Network  Fee</Text>
-        <Text style={styles.value}>{fee}</Text>
-     </View>
+      {rows.map(({ label, value }) => (
+        <View key={label} style={styles.row}>
+          <Text style={styles.label}>{label}</Text>
+          <Text style={styles.value}>{value}</Text>
+        </View>
+      ))}
     </View>
   );
 }
+

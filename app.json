@@ -8,7 +8,11 @@
     "scheme": "reactnativeuichallenge",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./src/assets/icons/expo.icon"
+      "icon": "./src/assets/icons/expo.icon",
+      "bundleIdentifier": "com.boiipelo.ReactNativeUIChallenge",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {

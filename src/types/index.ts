@@ -1,4 +1,4 @@
 export type Currency = {
-  code: string;
-  name: string;
+  code: 'ETH' | 'USD';
+  balance: string;
 };
