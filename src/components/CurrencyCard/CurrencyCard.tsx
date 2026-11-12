@@ -4,6 +4,8 @@ import { Colors } from '../../constants/colors';
 import type { Currency } from '../../types';
 import { styles } from './styles';
 
+// Currencycard props section here
+
 type CurrencyCardProps = {
   label: string;
   currency: Currency;
@@ -11,14 +13,10 @@ type CurrencyCardProps = {
   onAmountChange?: (amount: string) => void;
 };
 
-export function CurrencyCard({
-  label,
-  currency,
-  amount,
-  onAmountChange,
-}: CurrencyCardProps) {
+// Export the currency variable section
+export function CurrencyCard({label,currency,amount,onAmountChange,} : CurrencyCardProps) {
   return (
-    <View style={styles.card}>
+    <View style={styles.card} >
       <View style={styles.topRow}>
         <Text style={styles.label}>{label}</Text>
         <View style={styles.currency}>

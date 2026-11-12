@@ -6,7 +6,7 @@ import { Typography } from '../../constants/typography';
 
 export const styles = StyleSheet.create({
   amount: {
-    color: Colors.text,
+    color : Colors.text,
     padding: 0,
     ...Typography.amount,
   },

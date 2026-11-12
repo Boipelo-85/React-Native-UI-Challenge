@@ -1,7 +1,13 @@
 import { useState } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { CurrencyCard } from '@/components/CurrencyCard/CurrencyCard';
+import { FeeDetails } from '@/components/FeeDetails/FeeDetails';
+import { SwapButton } from '@/components/SwapButton/SwapButton';
+
+import { Button } from '@expo/ui';
+import { Ionicons } from '@expo/vector-icons';
 import { Header } from '../../components/Header/Header';
 import type { Currency } from '../../types';
 import { styles } from './styles';
@@ -26,9 +32,12 @@ export default function ExchangeScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.content}>
         <Header title="Exchange" subtitle="" titleStyle={styles.title} />
+        <Ionicons 
+          name='notifications'
+          style={styles.title}
+         />
 
-
-        {/* <View style={styles.currencyFields}>
+        <View style={styles.currencyFields}>
           <CurrencyCard
             amount={amount}
             currency={payCurrency}
@@ -43,8 +52,9 @@ export default function ExchangeScreen() {
           />
         </View>
         <FeeDetails exchangeRate="—" fee="—" />
-        <Button disabled title="Continue" /> */}
+        <Button disabled label="Continue" />
       </ScrollView>
     </SafeAreaView>
+
   );
 }

@@ -22,3 +22,22 @@ export const styles = StyleSheet.create({
     fontSize: 20
   },
 });
+
+// export const styles = StyleSheet.create({
+
+//       title :{
+
+//           color : Colors.primary,
+//           fontSize: Spacing.lg,
+//       },
+//       luka : {
+
+//           backgroundColor : Colors.background
+          
+//       },
+//       funa : {
+
+
+//       }
+
+// });
