@@ -8,20 +8,14 @@ export const styles = StyleSheet.create({
     padding: Spacing.lg,
   },
   currencyRow: {
+    alignSelf: 'flex-start',
+    minHeight: 44,
     alignItems: 'center',
     flexDirection: 'row',
     gap: Spacing.sm,
   },
-  currencyIcon: {
-    alignItems: 'center',
-    backgroundColor: '#2A2A31',
-    borderRadius: 21,
-    height: 42,
-    justifyContent: 'center',
-    width: 42,
-  },
-  ethIcon: {
-    backgroundColor: '#111114',
+  pressed: {
+    opacity: 0.7,
   },
   currencyCode: {
     color: '#F5F3F7',

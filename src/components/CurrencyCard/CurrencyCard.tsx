@@ -1,33 +1,34 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import { Text, TextInput, View } from 'react-native';
+import { Pressable, Text, TextInput, View } from 'react-native';
 
-import type { Currency } from '../../types';
+import { CurrencyIcon } from '@/components/CurrencyIcon/CurrencyIcon';
+import type { Currency } from '@/types';
 import { styles } from './styles';
 
 type CurrencyCardProps = {
   label: string;
   currency: Currency;
   amount: string;
+  balance: string;
+  onSelectCurrency: () => void;
   onAmountChange?: (amount: string) => void;
 };
 
-export function CurrencyCard({ label, currency, amount, onAmountChange }: CurrencyCardProps) {
+export function CurrencyCard({ label, currency, amount, balance, onSelectCurrency, onAmountChange }: CurrencyCardProps) {
   const amountLabel = `${label} amount in ${currency.code}`;
 
   return (
     <View style={styles.card}>
-      <View style={styles.currencyRow}>
-        <View style={[styles.currencyIcon, currency.code === 'ETH' && styles.ethIcon]} aria-hidden>
-          <MaterialCommunityIcons
-            name={currency.code === 'ETH' ? 'ethereum' : 'currency-usd'}
-            size={28}
-            style={styles.currencyCode}
-          />
-        </View>
+      <Pressable
+        accessibilityLabel={`${label} currency, ${currency.name}`}
+        accessibilityRole="button"
+        hitSlop={4}
+        onPress={onSelectCurrency}
+        style={({ pressed }) => [styles.currencyRow, pressed && styles.pressed]}>
+        <CurrencyIcon currency={currency} />
         <Text style={styles.currencyCode}>{currency.code}</Text>
         <Ionicons name="chevron-down" size={13} style={styles.chevron} aria-hidden />
-      </View>
+      </Pressable>
       {onAmountChange ? (
         <TextInput
           accessibilityLabel={amountLabel}
@@ -49,7 +50,7 @@ export function CurrencyCard({ label, currency, amount, onAmountChange }: Curren
       )}
       <View style={styles.balanceRow}>
         <Text style={styles.balance}>Balance</Text>
-        <Text style={[styles.balance, styles.balanceValue]}>{currency.balance}</Text>
+        <Text style={[styles.balance, styles.balanceValue]}>{balance}</Text>
       </View>
     </View>
   );

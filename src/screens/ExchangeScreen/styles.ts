@@ -36,6 +36,10 @@ export const styles = StyleSheet.create({
     right: 0,
     top: 21,
   },
+  error: {
+    ...Typography.body,
+    color: '#FFA9B7',
+  },
   rate: {
     ...Typography.body,
     color: '#F5F3F7',

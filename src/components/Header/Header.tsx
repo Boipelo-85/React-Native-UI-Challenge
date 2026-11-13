@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 
 import { styles } from './styles';
 
+// Initialize the head props section
 type HeaderProps = {
   title: string;
 };
